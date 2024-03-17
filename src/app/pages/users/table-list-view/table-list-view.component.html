@@ -2,15 +2,15 @@
     <thead>
       <tr>
         <th>Name</th>
+        <th>ID</th>
         <th>Email</th>
-        <th>Phone</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let user of users">
         <td>{{ user.name }}</td>
+        <td>{{ user.id}}</td>
         <td>{{ user.email }}</td>
-        <td>{{ user.phone }}</td>
       </tr>
     </tbody>
   </table>

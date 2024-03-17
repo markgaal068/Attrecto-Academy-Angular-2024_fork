@@ -22,6 +22,7 @@ export class UsersComponent implements OnInit{
     this.userService.getUsers().subscribe({
       next: (users)=> {
         this.users = users
+        console.log(this.users)
       }
     })
   }

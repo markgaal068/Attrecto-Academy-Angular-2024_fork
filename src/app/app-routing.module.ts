@@ -7,6 +7,7 @@ import { UsersComponent } from './pages/users/users/users.component';
 import { BadgesComponent } from './pages/badges/badges/badges.component';
 import {UserCreateComponent} from "./pages/user-create/user-create.component";
 import { ErrorCompComponent } from './pages/error-comp/error-comp.component';
+import { AppComponent } from './app.component';
 
 const routes: Routes = [
   { path: 'counter', component: CounterComponent },
