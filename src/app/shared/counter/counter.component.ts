@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -5,19 +6,30 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-counter',
   standalone: true,
   imports: [
-    FormsModule,
+    FormsModule, CommonModule
   ],
   templateUrl: './counter.component.html',
   styleUrl: './counter.component.scss'
 })
 export class CounterComponent {
   @Input() counter: number = 26;
+  errorMessage: string = '';
 
   increaseCounter() {
+    this.errorMessage = '';
+    if (this.counter < 0){
+      this.errorMessage = 'Nem adható meg ilyen szám';
+      this.counter = 0;
+    }
     this.counter++;
   }
 
   decreaseCounter() {
-    this.counter--;
+    if (this.counter > 0) {
+      this.counter--;
+    }
+    else {
+      this.errorMessage = 'A szám nem felel meg a követelményeknek! Nem lehet negatív.';
+    }
   }
 }
