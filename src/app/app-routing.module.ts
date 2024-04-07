@@ -7,6 +7,7 @@ import { UsersComponent } from './pages/users/users/users.component';
 import { BadgesComponent } from './pages/badges/badges/badges.component';
 import {UserCreateComponent} from "./pages/user-create/user-create.component";
 import {UserEditComponent} from "./pages/user-edit/user-edit.component";
+import { BadgeEditComponent } from './pages/badge-edit/badge-edit.component';
 
 const routes: Routes = [
   { path: 'counter', component: CounterComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'badges', component: BadgesComponent },
   { path: 'user-create', component: UserCreateComponent },
   { path: 'user-edit/:userId', component: UserEditComponent },
+  { path: 'badge-edit/:badgeId', component: BadgeEditComponent },
   { path: '**', redirectTo: 'counter' }
 ]
 

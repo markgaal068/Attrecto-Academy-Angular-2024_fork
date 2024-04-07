@@ -15,6 +15,10 @@ export class BadgeService {
     return this.httpClient.get<Badge[]>(`${environment.apiUrl}/badges`)
   }
 
+  getBadge(badgeId:number):Observable<Badge>{
+    return this.httpClient.get<Badge>(`${environment.apiUrl}/badges/${badgeId}`)
+  }
+
   createBadge(badge:Badge) {
     return this.httpClient.post(`${environment.apiUrl}/badge`,badge)
   }

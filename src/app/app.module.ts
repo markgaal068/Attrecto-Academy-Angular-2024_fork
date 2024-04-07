@@ -23,7 +23,9 @@ import {UserEditModule} from "./pages/user-edit/user-edit.module";
     BadgesModule,
     HttpClientModule,
     UserEditModule,
-    UserCreateModule],
+    UserCreateModule,
+    BadgesModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

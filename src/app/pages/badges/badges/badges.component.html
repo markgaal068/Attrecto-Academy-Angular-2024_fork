@@ -2,7 +2,9 @@
     <div class="row g-4">
         @for (badge of badges; track badge) {
             <div class="col-4">
-                <app-badge-card [badge]="badge"></app-badge-card>
+                <app-badge-card [badge]="badge"
+                (click)="navigateToEditBadge(badge.id)">
+            </app-badge-card>
             </div>
         }
     </div>
