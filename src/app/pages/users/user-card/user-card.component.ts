@@ -1,5 +1,9 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import { User } from '../classes/User';
+import { BadgeService } from '../../badges/services/badge.service';
+import { Badge } from '../../badges/classes/Badge';
+import { NgFor } from '@angular/common';
+
 
 @Component({
   selector: 'app-user-card',
@@ -16,4 +20,19 @@ export class UserCardComponent {
 
     this.deleteClicked.emit(id)
   }
+
+  @Input() badges: any[];
+  
+  constructor(private badgeService:BadgeService) { }
+
+
+  getBadgeImage(id: number) {
+    for (const badge of this.badges) {
+      if(badge.id = id)
+        {
+          return badge.image;
+        }
+    }
+  }
 }
+

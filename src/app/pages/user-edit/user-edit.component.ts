@@ -18,7 +18,7 @@ export class UserEditComponent {
   getUser(){
     const userId = parseInt(this.route.snapshot.paramMap.get('userId'))
     this.userService.getUser(userId).subscribe({
-      next:(user)=> {
+      next:(user:any)=> {
         this.user=user
       }
     })
