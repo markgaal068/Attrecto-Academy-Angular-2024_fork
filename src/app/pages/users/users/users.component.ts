@@ -10,7 +10,6 @@ import {Router} from "@angular/router";
 })
 export class UsersComponent implements OnInit{
   users: User[];
-
   constructor(private userService: UserService, private router:Router) {
   }
 

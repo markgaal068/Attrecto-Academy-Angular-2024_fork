@@ -12,6 +12,7 @@ import { NgFor } from '@angular/common';
 })
 export class UserCardComponent {
   @Input() user: User;
+  @Input() badge: Badge;
 
   @Output() deleteClicked = new EventEmitter<number>
 
@@ -19,20 +20,6 @@ export class UserCardComponent {
     event.stopPropagation()
 
     this.deleteClicked.emit(id)
-  }
-
-  @Input() badges: any[];
-  
-  constructor(private badgeService:BadgeService) { }
-
-
-  getBadgeImage(id: number) {
-    for (const badge of this.badges) {
-      if(badge.id = id)
-        {
-          return badge.image;
-        }
-    }
   }
 }
 

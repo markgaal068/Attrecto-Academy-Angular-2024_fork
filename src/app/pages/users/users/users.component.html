@@ -8,7 +8,8 @@
       <div class="col-4">
         <app-user-card [user]="user"
                        (click)="navigateToEditUser(user.id)"
-                       (deleteClicked)="deleteUser($event)">
+                       (deleteClicked)="deleteUser($event)"
+                       >
         </app-user-card>
       </div>
     }

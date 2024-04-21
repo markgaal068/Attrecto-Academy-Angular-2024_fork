@@ -7,12 +7,7 @@
   </div>
 
   <div class="card-body user-title">
-    <h5 class="m-0">{{user.name}}</h5>
+    <h5 class="m-0">{{ user.name }}</h5>
   </div>
 
-  <div class="user-badges" *ngIf="badges && badges.length > 0">
-    <div class="user-badge" *ngFor="let badge of badges">
-      <img [src]="getBadgeImage(badge.id)" alt="Badge Image" width="30px">
-    </div>
-  </div>
 </div>
