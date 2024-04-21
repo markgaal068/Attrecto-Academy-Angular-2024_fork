@@ -10,4 +10,14 @@
     <h5 class="m-0">{{ user.name }}</h5>
   </div>
 
+ @if(badges) {
+    <div class="user-badges">
+    @for (badge of badges; track badge.id) {
+      @if (getUserBadgeIds().includes(badge.id)) {
+        <img class="user-badge" (click)="alert(getBadgeImage(badge.id))" [src]="badge.image" alt="badge-image">
+      }
+    }
+    </div>
+  }
+
 </div>

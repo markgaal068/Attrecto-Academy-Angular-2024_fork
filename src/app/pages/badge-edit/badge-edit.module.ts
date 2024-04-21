@@ -1,13 +1,16 @@
-import { NgModule } from "@angular/core";
-import { BadgeEditComponent } from "./badge-edit.component";
-import { CommonModule } from "@angular/common";
-import { UserEditFormModule } from "src/app/shared/modules/user-edit-form/user-edit-form.module";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { BadgeEditComponent } from './badge-edit.component';
+import { UserEditFormModule } from '../../shared/modules/user-edit-form/user-edit-form.module';
+
+
 
 @NgModule({
-    declarations: [BadgeEditComponent],
-    imports: [
-      CommonModule,
-      UserEditFormModule
-    ]
-  })
-  export class BadgeEditModule { }
+  declarations: [BadgeEditComponent],
+  imports: [
+    CommonModule,
+    BadgeEditModule,
+    UserEditFormModule,
+  ],
+})
+export class BadgeEditModule { }

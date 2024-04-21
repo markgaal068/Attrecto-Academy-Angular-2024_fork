@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import { User } from '../classes/User';
 import {UserService} from "./services/user.service";
 import {Router} from "@angular/router";
+import { Badge } from '../../badges/classes/Badge';
 
 @Component({
   selector: 'app-users',
@@ -10,6 +11,7 @@ import {Router} from "@angular/router";
 })
 export class UsersComponent implements OnInit{
   users: User[];
+  badges: Badge[];
   constructor(private userService: UserService, private router:Router) {
   }
 
